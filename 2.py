@@ -1,3 +1,3 @@
 
 print("almog")
-print
+print("test")

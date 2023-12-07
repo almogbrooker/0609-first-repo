@@ -1,0 +1,9 @@
+properties([pipelineTriggers([pollSCM('H * * * *')])])
+node {
+    stage("clone"){
+        git branch: 'main', url: "https://github.com/almogbrooker/0609-first-repo.git"
+    }
+    stage ("execute"){
+        sh "python3 2.py"
+    }
+}
